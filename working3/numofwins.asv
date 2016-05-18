@@ -1,0 +1,23 @@
+function numofwins
+% perpose: to keep a running total of player1 and player2's wins and pushe
+% their wins to the score board. 
+
+data = get(gcbf,'userdata');
+if CheckForWin(data.gameboard) == -1
+    wins = data.player1.win;
+    data.player1.win = wins +1;
+    set(gcbf,'userdata',data)
+    P1handle = findobj('tag','P1numofwins');    
+    set( P1handle,'string',data.player1.win)
+elseif CheckForWin(data.gameboard) == 1
+    wins = data.player2.win;
+    data.player2.win = wins + 1;
+    set(gcbf,'userdata',data);
+    P2handle = findobj('tag','P2numofwins');
+    set( P2handle,'string',data.player2.win);
+end
+end
+
+
+
+

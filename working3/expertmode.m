@@ -1,0 +1,5 @@
+function expertmode(position)
+
+
+
+end

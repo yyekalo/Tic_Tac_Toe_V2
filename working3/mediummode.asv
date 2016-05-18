@@ -1,0 +1,36 @@
+function mediummode(position)
+
+
+data = get(gcbf,'Userdata');
+
+
+if CheckForWin(data.gameboard)==0
+    set(gcbo,'String','X','Enable','off');
+    data.gameboard(position)=1;
+    
+    if CheckForWin(data.gameboard)==0
+        if  isblock(data.gameboard)
+            computerposition=isblock(data.gameboard);
+        else
+            
+            computerposition=getposition(data.gameboard)
+           
+        end
+            data.gameboard(computerposition)=-1;
+            h = findobj( gcbf, 'Tag', ['cell',num2str(computerposition)]);
+            disp(['didnt block',temp2])
+            set(h,'String','O','Enable','off');
+            disp(['in the random part',num2str(temp2)])
+            set(gcbf,'userdata',data)
+    end
+    data = get(gcbf,'Userdata');
+    data.gameboard
+    set(gcbf,'userdata',data)
+    disp('mediumode function called displaying gameboard')
+    data.gameboard
+    disp('*****************************')
+    hh=get(gcbf,'userdata')
+    hh.gameboard
+end
+end
+
