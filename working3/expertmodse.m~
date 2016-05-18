@@ -1,0 +1,52 @@
+function expertmode(position)
+data = get(gcbf,'Userdata');
+
+if CheckForWin(data.gameboard)==0
+    set(gcbo,'String','X','Enable','off');
+    data.gameboard(position)=1;
+    
+   if ChecForWin(data.gameboard)==0
+       
+      
+      if winmove(data.gameboard)~=0
+           computerposition=winmove(data.gameboad);
+      elseif data.gameBoard(5)==0
+           computerposition=5;
+      elseif da
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+  
+   end
+     set(gcbf,'userdata',data)
+end
+
+
+end

@@ -1,11 +1,8 @@
 function easymode(position)
 
 data = get(gcbf,'Userdata');
-data.gameboard(position)
-disp('before the loop')
-CheckForWin(data.gameboard)
-
-if data.gameboard(position)==0 && CheckForWin(data.gameboard)==0
+gameboard=data.gameboard;
+if CheckForWin(data.gameboard)==0
     
     disp('we got here')
     set(gcbo,'String','X','Enable','off');
@@ -25,5 +22,9 @@ if data.gameboard(position)==0 && CheckForWin(data.gameboard)==0
 end
 
 set(gcbf,'userdata',data)
+if CheckForWin(gameboard) == 0
+    numofwins;
+end
+
 end
 

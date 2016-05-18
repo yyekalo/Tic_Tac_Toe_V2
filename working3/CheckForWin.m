@@ -22,8 +22,13 @@ elseif DiagWin1==-3 || DiagWin2==-3
 elseif DiagWin1==3 || DiagWin2==3
     player=1;
 else
-    player=0;
-    
-return
+    player=0; 
+end
+if player~=0
+    for n=1:9
+     h = findobj( gcbf, 'Tag', ['cell',num2str(n)]);
+        set(h,'Enable','off');   
+    end
+end
 end
 

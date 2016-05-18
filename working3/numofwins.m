@@ -2,10 +2,10 @@ function numofwins
 
 data=get(gcbf,'userdata');
 
-    if CheckForWin(data.gameboard)==1
+    if CheckForWin(data.gameboard)==-1
         data.player2.win=data.player2.win+1;
         disp('your are incrementing player 1 wins')
-    elseif CheckForWin(data.gameboard)==-1
+    elseif CheckForWin(data.gameboard)==1
         data.player1.win=data.player1.win+1;
         disp('you are incrementing player 2 wins')
     end

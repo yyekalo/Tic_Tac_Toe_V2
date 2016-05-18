@@ -1,5 +1,4 @@
 function newgame
-data_GameBoard
 Myfig=gcbf;
 
 % enable the game board buttons to on 
